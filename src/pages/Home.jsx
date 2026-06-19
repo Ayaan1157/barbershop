@@ -347,7 +347,15 @@ export default function Home() {
                   }}
                 ></div>
                 <img
-                  src={featuredBarber.image_url ? (featuredBarber.image_url.startsWith('http') ? featuredBarber.image_url : '/' + featuredBarber.image_url) : ''}
+                  src={
+                    featuredBarber.image_url
+                      ? featuredBarber.image_url.startsWith('http')
+                        ? featuredBarber.image_url
+                        : featuredBarber.image_url.includes('marcus')
+                        ? 'https://images.unsplash.com/photo-1605497746444-ac9dbd3974a7?auto=format&fit=crop&q=80&w=600'
+                        : '/' + featuredBarber.image_url
+                      : ''
+                  }
                   alt={featuredBarber.name}
                   style={{
                     width: '100%',

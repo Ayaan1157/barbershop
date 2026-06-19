@@ -105,7 +105,21 @@ export default function Barbers() {
                   className="barber-corner-bottom"
                 ></div>
                 <img
-                  src={barber.image_url ? (barber.image_url.startsWith('http') ? barber.image_url : '/' + barber.image_url) : ''}
+                  src={
+                    barber.image_url
+                      ? barber.image_url.startsWith('http')
+                        ? barber.image_url
+                        : barber.image_url.includes('marcus')
+                        ? 'https://images.unsplash.com/photo-1605497746444-ac9dbd3974a7?auto=format&fit=crop&q=80&w=600'
+                        : barber.image_url.includes('silas')
+                        ? 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=600'
+                        : barber.image_url.includes('julian')
+                        ? 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=600'
+                        : barber.image_url.includes('devon')
+                        ? 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&q=80&w=600'
+                        : '/' + barber.image_url
+                      : ''
+                  }
                   alt={barber.name}
                   style={{
                     width: '100%',
