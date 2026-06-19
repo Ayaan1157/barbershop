@@ -484,7 +484,7 @@ export default function Booking() {
                         ? barber.image_url.startsWith('http')
                           ? barber.image_url
                           : barber.image_url.includes('marcus')
-                          ? '/marcus_vance.jpg'
+                          ? '/marcus_vance.jpg?v=2'
                           : barber.image_url.includes('silas')
                           ? 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=600'
                           : barber.image_url.includes('julian')

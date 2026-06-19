@@ -352,7 +352,7 @@ export default function Home() {
                       ? featuredBarber.image_url.startsWith('http')
                         ? featuredBarber.image_url
                         : featuredBarber.image_url.includes('marcus')
-                        ? '/marcus_vance.jpg'
+                        ? '/marcus_vance.jpg?v=2'
                         : '/' + featuredBarber.image_url
                       : ''
                   }
