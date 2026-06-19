@@ -347,7 +347,7 @@ export default function Home() {
                   }}
                 ></div>
                 <img
-                  src={featuredBarber.image_url}
+                  src={featuredBarber.image_url ? (featuredBarber.image_url.startsWith('http') ? featuredBarber.image_url : '/' + featuredBarber.image_url) : ''}
                   alt={featuredBarber.name}
                   style={{
                     width: '100%',

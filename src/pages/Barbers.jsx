@@ -105,7 +105,7 @@ export default function Barbers() {
                   className="barber-corner-bottom"
                 ></div>
                 <img
-                  src={barber.image_url}
+                  src={barber.image_url ? (barber.image_url.startsWith('http') ? barber.image_url : '/' + barber.image_url) : ''}
                   alt={barber.name}
                   style={{
                     width: '100%',

@@ -479,7 +479,7 @@ export default function Booking() {
                   className="booking-barber-item"
                 >
                   <img
-                    src={barber.image_url}
+                    src={barber.image_url ? (barber.image_url.startsWith('http') ? barber.image_url : '/' + barber.image_url) : ''}
                     alt={barber.name}
                     style={{
                       width: '100%',
